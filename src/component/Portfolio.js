@@ -4,6 +4,11 @@ import { GiAbstract007 } from "react-icons/gi";
 import SearchBar from './SearchBar';
 import '../css/Portfolio.css';
 
+/**
+ * Renders the Portfolio component.
+ *
+ * @return {JSX.Element} The rendered Portfolio component.
+ */
 const Portfolio = () => {
 
     const githubAccessToken = process.env.REACT_APP_GITHUB_ACCESS_TOKEN;
@@ -13,6 +18,8 @@ const Portfolio = () => {
     // Search Filter
     const [filteredRepos, setFilteredRepos] = useState([]);
 
+    // Fetch GitHub repositories when component mounts
+    // Empty dependency array ensures this only runs once
     useEffect(() => {
         const fetchRepos = async () => {
             try {
@@ -37,7 +44,7 @@ const Portfolio = () => {
         );
         setFilteredRepos(filtered);
     };
-    console.log(repos)
+
     return (
         <div className='portfolio-page'>
             <h2>Creation</h2>
@@ -50,6 +57,12 @@ const Portfolio = () => {
     );
 };
 
+/**
+ * Renders the Creation component based on the provided repositories.
+ *
+ * @param {Array} repos - The array of repositories to render.
+ * @return {JSX.Element} The rendered Creation component.
+ */
 const Creation = ({ repos }) => {
     return (
         <div className="portfolio-icons">
@@ -67,6 +80,13 @@ const Creation = ({ repos }) => {
     );
 };
 
+/**
+ * Renders a list of forked repositories as clickable links.
+ *
+ * @param {Object} props - The properties passed to the component.
+ * @param {Array} props.repos - An array of repository objects.
+ * @return {JSX.Element} A div containing a list of forked repositories.
+ */
 const Fork = ({ repos }) => {
     return (
         <div className="portfolio-icons">

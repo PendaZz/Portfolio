@@ -2,6 +2,11 @@ import React from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
 import '../css/Header.css';
 
+/**
+ * Renders the header component of the application.
+ *
+ * @return {JSX.Element} The header component.
+ */
 const Header = () => {
     const location = useLocation();
     return (

@@ -4,27 +4,31 @@ import axios from 'axios';
 import { FaUser, FaAtlas, FaTools, FaBriefcase, FaFileAlt } from 'react-icons/fa';
 
 
+/**
+ * Renders the resume page.
+ *
+ * @return {JSX.Element} The JSX element representing the resume page.
+ */
 const Resume = () => {
 
     const githubAccessToken = process.env.REACT_APP_GITHUB_ACCESS_TOKEN;
 
-    const [user, setUser] = useState(null);
+    const [user, setUser] = useState(null); // Initialise state to null
 
     useEffect(() => {
-        const fetchUserData = async () => {
+        const fetchUserData = async () => { // Define an async function to fetch data
             try {
                 const response = await axios.get('https://api.github.com/user', {
-                headers: {
-                    Authorization: githubAccessToken
-                }
+                    headers: {
+                        Authorization: githubAccessToken
+                    }
                 });
-                setUser(response.data);
-                console.log(user);
+                setUser(response.data); // Set user data in state
             } catch (error) {
-                console.error('Error fetching user data:', error);
+                console.error('Error fetching user data:', error); // Log error to console
             }
         };
-        fetchUserData();
+        fetchUserData(); // Call the async function on component mount
     }, []);
 
     const SkillBar = ({ skill, level, color }) => {
@@ -40,7 +44,7 @@ const Resume = () => {
           </div>
         );
     };
-    console.log(user);
+
     return (
         <div className="resume-page">
             {user ? (

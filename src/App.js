@@ -7,6 +7,11 @@ import Portfolio from './component/Portfolio';
 import About from './component/About';
 import background from './img/Starry_Sky.jpg';
 
+/**
+ * React component for the main App.
+ *
+ * @return {JSX.Element} The main App component.
+ */
 function App() {
   return (
     <div style={{ backgroundImage: `url(${background})`, backgroundSize: `100%`}}>

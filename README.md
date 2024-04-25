@@ -44,7 +44,7 @@ REACT_APP_FACEBOOK_ACCESS_TOKEN=your_facebook_access_token
 5. Start the development server: `npm start`
 6. Open your browser and navigate to [http://localhost:3000](http://localhost:3000)
 
-Make sure to replace `your-username` with your GitHub username and provide your actual API access tokens in the `.env` file. If you encounter any issues during installation or running the application, refer to the troubleshooting section in the README or open an issue on GitHub for assistance.
+Make sure to provide your actual API access tokens in the `.env` file. If you encounter any issues during installation or running the application, refer to the troubleshooting section in the README or open an issue on GitHub for assistance.
 
 ## Application Architecture
 This application is built using React.js, a popular JavaScript library for building user interfaces. It follows a component-based architecture, where different parts of the UI are broken down into reusable components. The application uses React Router for navigation between different pages and Axios for making HTTP requests to external APIs.

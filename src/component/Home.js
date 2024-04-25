@@ -2,7 +2,15 @@ import React, { useState, useEffect } from 'react';
 import '../css/Home.css';
 import Footer from './Footer';
 
+
+/**
+ * React component for the Home page.
+ *
+ * @return {JSX.Element} The Home component.
+ */
 const HomePage = () => {
+
+    // Hook for showing/hiding the text animation on the home page.
     const [showFirst, setShowFirst] = useState(false);
     const [showSecond, setShowSecond] = useState(false);
     const [showThird, setShowThird] = useState(false);

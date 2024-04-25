@@ -3,6 +3,13 @@ import { Modal, IconButton, Typography, Box } from '@mui/material';
 import { InfoOutlined } from '@mui/icons-material';
 import "../css/Section.css";
 
+/**
+ * Renders a section with a title, content, and interactive features.
+ *
+ * @param {string} title - The title of the section.
+ * @param {string} content - The content of the section.
+ * @return {JSX.Element} The JSX element representing the section.
+ */
 const Section = ({ title, content }) => {
     const [open, setOpen] = useState(false);
 

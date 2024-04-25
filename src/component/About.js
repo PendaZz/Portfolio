@@ -6,48 +6,55 @@ import { FiGithub } from "react-icons/fi";
 import FacebookQR from "../img/FaceBookQR.png";
 import Me from "../img/Avatar.jpg";
 
+/**
+ * Renders the About component, which displays information about the user.
+ *
+ * @return {JSX.Element} The About component.
+ */
 const About = () => {    
 
     const facebookAccessToken = process.env.REACT_APP_FACEBOOK_ACCESS_TOKEN;
     const githubAccessToken = process.env.REACT_APP_GITHUB_ACCESS_TOKEN;
 
-    const [repos, setRepos] = useState([]);
+    const [repos, setRepos] = useState([]); // Store user's data from Facebook API
 
     useEffect(() => {
-    const fetchRepos = async () => {
-        try {
-            const response = await axios.get('https://graph.facebook.com/v19.0/me', {
-                params: {
-                    fields: 'id,name,email,location',
-                    access_token: facebookAccessToken,
-                }
-            });
-            setRepos(response.data);
-        } catch (error) {
-            console.error('Error fetching repos:', error);
-        }
-    };
-    fetchRepos();
-    }, []);
-
-
-    const [user, setUser] = useState(null);
-
-    useEffect(() => {
-        const fetchUserData = async () => {
+        const fetchRepos = async () => { // Fetch data from Facebook API
             try {
-                const response = await axios.get('https://api.github.com/user', {
-                headers: {
-                    Authorization: githubAccessToken
-                }
+                const response = await axios.get('https://graph.facebook.com/v19.0/me', { // GET request
+                    params: { // Query string parameters
+                        fields: 'id,name,email,location', // Fields to retrieve from the API
+                        access_token: facebookAccessToken, // Access token for the API
+                    }
                 });
-                setUser(response.data);
+                setRepos(response.data); // Set the state of the component with the API's response
             } catch (error) {
-                console.error('Error fetching user data:', error);
+                console.error('Error fetching repos:', error); // Catch any errors and log them to the console
             }
         };
-        fetchUserData();
-    }, []);
+        fetchRepos(); // Run the function when the component mounts
+    }, []); // Empty dependency array ensures this only runs once
+
+
+
+    const [user, setUser] = useState(null); // Store user's data from GitHub API
+
+    useEffect(() => {
+        const fetchUserData = async () => { // Define an async function to fetch data
+            try {
+                const response = await axios.get('https://api.github.com/user', { // GET request
+                    headers: {
+                        Authorization: githubAccessToken // Pass access token as header for the request
+                    }
+                });
+                setUser(response.data); // Set user data in state
+            } catch (error) {
+                console.error('Error fetching user data:', error); // Log error to console
+            }
+        };
+        fetchUserData(); // Run the function when the component mounts
+    }, []); // Empty dependency array ensures this only runs once
+
 
     return (
         <div className='about-page'>
