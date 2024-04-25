@@ -1,0 +1,12 @@
+.navbar-brand {
+    font-family: 'Lucida Console', 'Courier New', monospace;
+    font-size: x-large;
+}
+
+.gradient-custom {
+    background: white;
+    height: 40px;
+    font-family: 'Lucida Console', 'Courier New', monospace;
+    font-size: x-large;
+}
+

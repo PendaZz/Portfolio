@@ -1,0 +1,157 @@
+.about-page {
+    background-size: 100%;
+    height: 834px;
+    padding: 20px;
+    text-align: left;
+    font-family: 'Lucida Console', 'Courier New', monospace;
+}
+
+.about-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    height: 750px;
+}
+
+.about-item {
+    background-color: #f0f0f0;
+    border-radius: 15px;
+    padding: 0px;
+    text-align: center;
+    overflow: hidden;
+}
+.content-container {
+    position: relative;
+    height: 100%;
+    
+}
+
+.two-row-one-col {
+    grid-row: span 2;
+}
+
+.two-row-two-col {
+    grid-row: span 2;
+    grid-column: span 2;
+}
+
+.one-row-one-col {
+    grid-row: span 1;
+    grid-column: span 1;
+}
+
+.right-top {
+    grid-column: span 1;
+}
+
+.right-bottom {
+    grid-column: span 1;
+    grid-row: span 2;
+}
+
+.about-title {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.divider {
+    border-top: 2px solid #ccc;
+    margin-top: 10px;
+    padding-top: 10px;
+}
+
+.content1 {
+    background: rgb(255, 208, 63);
+}
+.avatar {
+    margin-top: 100px;
+    height: 300px;
+}
+
+.content2 {
+    background: rgb(255, 251, 243);
+    background-image: url('../img/city.jpg');
+    background-size: 111%;
+}
+
+.content3 {
+    background: rgb(47, 210, 219);
+}
+
+.content4 {
+    background: rgb(255, 152, 198);
+}
+
+.content5 {
+    background: rgb(255, 152, 198);
+}
+
+.content6 {
+    background: rgb(129, 126, 248);
+}
+.content6 a {color: black;}
+
+.content7 {
+
+    background: rgb(47, 210, 219);
+}
+
+.overlay {
+    position: absolute;
+    width: 50px; 
+    height: 50px; 
+    background-color: transparent; 
+    cursor: pointer; 
+}
+.overlay::after {
+    content: attr(data-text); 
+    position: absolute;
+    top: -30px; 
+    left: 50%; 
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.8); 
+    color: #fff; 
+    padding: 5px 10px; 
+    border-radius: 5px; 
+    opacity: 0; 
+    transition: opacity 0.3s ease; 
+}
+.overlay:hover::after {
+    opacity: 1; 
+}
+.o1 {
+    top: 70px; 
+    left: 70px; 
+}
+.o2 {
+    top: 140px;
+    left: 210px;
+}
+.o3 {
+    top: 70px;
+    left: 370px;
+}
+.o4 {
+    top: 140px;
+    left: 330px;
+}
+.o5 {
+    top: 70px;
+    left: 630px;
+}
+.o6 {
+    top: 140px;
+    left: 490px;
+}
+.o7 {
+    top: 140px;
+    left: 770px;
+}
+
+.facebookQR {
+    height: 70px;
+}
+
+.Me {
+    height: 400px;
+}

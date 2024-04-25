@@ -1,0 +1,132 @@
+.resume-page {
+    background-size: cover;
+    height: 834px;
+    padding: 20px;
+    text-align: left;
+    color: white;
+    background-attachment: fixed;
+    overflow-y: auto;
+    font-family: 'Lucida Console', 'Courier New', monospace;
+}
+
+.resume-content {
+    color: black;
+    max-width: 1400px; 
+    margin: 0 auto; 
+    background-color: white;
+    border-radius: 20px;
+    padding: 20px;
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: row;
+}
+
+.resume-content:hover {
+    transform: scale(1.02); 
+}
+
+.Overview {
+    max-width: 700px;
+}
+.basicInfo {
+    margin-left: 100px;
+    max-width: 500px;
+}
+
+.info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.info b {
+    margin-right: 10px;
+}
+
+.skill-bar {
+    margin-bottom: 10px;
+}
+  
+.skill-info {
+    display: flex;
+    justify-content: space-between;
+    width: 700px;
+}
+
+.skill-description {
+    margin-left: 100px;
+}
+  
+.progress-bar {
+    width: 700px;
+    height: 20px;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+.progress {
+    height: 100%;
+    background-color: #00bcd4;
+  }
+
+.sidebar {
+    position: fixed;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%); 
+    height: 300px; 
+    width: 60px;
+    background-color: #f0f0f0;
+    overflow-y: auto; 
+    z-index: 999; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    border-radius: 10px;
+}
+.sidebar ul {
+    list-style-type: none; 
+    padding: 0;
+    margin: 0;
+}
+.sidebar li {
+    margin-bottom: 10px; 
+}
+
+.career-content {
+    color: black;
+    max-width: 1400px; 
+    margin: 0 auto; 
+    background-color: white;
+    border-radius: 20px;
+    padding: 20px;
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+.career-content:hover {
+    transform: scale(1.02); 
+}
+
+.full-time,
+.part-time {
+    width: 50%;
+    box-sizing: border-box;
+    padding: 0 10px; 
+}
+
+.career-type {
+    display: flex;
+}
+
+.qualification {
+    display: flex;
+    margin-bottom: 20px; 
+}
+.left {
+    flex: 1;
+}
+.right {
+    flex: 3;
+}

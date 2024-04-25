@@ -1,0 +1,51 @@
+.home-page {
+    background-size: 100%;
+    height: 834px;
+    padding: 20px;
+    text-align: left;
+}
+  
+.hero {
+    background-image: url('https://example.com/hero-image.jpg');
+    background-size: cover;
+    color: white;
+    padding: 100px 0;
+}
+
+.hero h1 {
+    font-size: 70pt;
+    font-family: 'Lucida Console', 'Courier New', monospace;
+    overflow: hidden;
+}
+
+.text-animation {
+    position: relative;
+    overflow: hidden;
+    opacity: 0;
+}
+
+.text-animation.show:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0; 
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+.text-animation.show {
+    opacity: 1; 
+    animation: fadeIn 1s ease forwards; 
+}
+
+  

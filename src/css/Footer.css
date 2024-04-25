@@ -1,0 +1,48 @@
+.footer {
+    background-image: linear-gradient(to bottom, rgba(19, 29, 39, 0.5), black);
+    color: #fff;
+    position: absolute;
+    bottom: 0;
+    width: 98%;
+
+}
+
+.row {
+    flex: initial;
+    flex-grow: 0; 
+    flex-shrink: 1; 
+    flex-basis: auto; 
+    margin-right: 1%;
+    margin-left: 1%;
+}
+
+.left,
+.middle,
+.right {
+    width: 33%;
+    text-align: center;
+    display: inline-block;
+    border: 2px solid white;
+    align-items: center;
+    padding: 1%;
+    font-family: 'Lucida Console', 'Courier New', monospace;
+    margin-bottom: 1%;
+}
+
+.left {
+    float: left;
+    border-left: none;
+    border-bottom: none;
+}
+
+.middle {
+    border-bottom: none;
+}
+
+.right {
+    border-right: none;
+    border-bottom: none;
+}
+
+
+  
