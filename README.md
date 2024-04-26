@@ -23,6 +23,7 @@ Contributions to the development of this application are welcome! If you find an
 ## Dependencies and Installation
 To install and run the application locally, ensure you have the following dependencies installed:
 
+- Boostrap: Using bootstrap as the style of the navigation bar
 - React Icons: Provides a library of icons for use in React applications.
 - Axios: A promise-based HTTP client for making requests to external APIs.
 - Material-UI: A popular React UI framework for building responsive and customizable user interfaces.
@@ -35,7 +36,9 @@ After installing the dependencies, follow these steps to run the application:
 
 1. Clone the repository: `git clone https://github.com/PendaZz/Portfolio.git`
 2. Navigate to the project directory: `cd Portfolio`
-3. Install dependencies: `npm install`
+3. Install dependencies: 
+`npm install`
+`npm install bootstrap react-icons axios @mui/material @emotion/react @emotion/styled`
 4. Create a `.env` file in the root directory and add your API access tokens:
 
 REACT_APP_GITHUB_ACCESS_TOKEN=your_github_access_token
