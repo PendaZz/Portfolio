@@ -84,7 +84,7 @@ const About = () => {
                     <div className="about-title">Where</div>
                     <div className="content-container content3">
                         <hr className="divider" />
-                        {repos && repos.location && repos.location.name ? (<div className="content">{repos.location.name}</div>) : (<div>loading...</div>)}
+                        {repos && repos.location && repos.location.name ? (<div className="content">{repos.location.name}</div>) : (<div>Please provide your Github token in .env</div>)}
                         <br /><br />
                     </div>
                 </div>
@@ -92,7 +92,7 @@ const About = () => {
                     <div className="about-title">Avatar</div>
                     <div className="content-container content4">
                         <hr className="divider" />
-                        {user? (<img src={user.avatar_url} className='avatar' alt='Avatar'/>) : (<div>loading...</div>)}
+                        {user? (<img src={user.avatar_url} className='avatar' alt='Avatar'/>) : (<div>Please provide your Facebook token in .env</div>)}
                     </div>
                 </div>
                 <div className="about-item one-row-one-col">
@@ -101,7 +101,7 @@ const About = () => {
                         <hr className="divider" />
                         <MdMailOutline size={70}/>
                         <br/>
-                        {repos? (<a>{repos.email}</a>) : (<a>loading...</a>)}
+                        {repos? (<a>{repos.email}</a>) : (<a>Please provide your Github token in .env</a>)}
                     </div>
                 </div>
                 <div className="about-item one-row-one-col">
@@ -110,7 +110,7 @@ const About = () => {
                         <hr className="divider" />
                         <FiGithub size={70}/>
                         <br />
-                        {user? (<a href={user.html_url}>{user.html_url}</a>) : (<a>loading...</a>)}
+                        {user? (<a href={user.html_url}>{user.html_url}</a>) : (<a>Please provide your Facebook token in .env</a>)}
                     </div>
                 </div>
                 <div className="about-item one-row-one-col">
@@ -119,7 +119,7 @@ const About = () => {
                         <hr className="divider" />
                         <img src={FacebookQR} alt="FacebookQR" className='facebookQR'/>
                         <br />
-                        {user? (<a>{user.name}</a>) : (<a>loading...</a>)}
+                        {user? (<a>{user.name}</a>) : (<a>Please provide your Facebook token in .env</a>)}
                     </div>
                 </div>
             </div>

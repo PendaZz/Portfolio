@@ -49,10 +49,10 @@ const Portfolio = () => {
         <div className='portfolio-page'>
             <h2>Creation</h2>
             <SearchBar onSubmit={handleSearch} />
-            <Creation repos={filteredRepos} />
+            {repos ? (<Creation repos={filteredRepos} />) : (<p>Please provide your Github token in .env</p>)}
             <br/><br/>
             <h2>Reading List (fork from Github)</h2>
-            <Fork repos={filteredRepos} />
+            {repos ? (<Fork repos={filteredRepos} />) : (<p>Please provide your Github token in .env</p>)}
         </div>
     );
 };

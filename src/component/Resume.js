@@ -47,8 +47,7 @@ const Resume = () => {
 
     return (
         <div className="resume-page">
-            {user ? (
-                <><div className="sidebar">
+            <div className="sidebar">
                     <ul>
                         <li><a href='#about-me'><FaUser title="About Me" /></a></li>
                         <li><a href='#skills'><FaTools title="Skills" /></a></li>
@@ -60,7 +59,7 @@ const Resume = () => {
                 <div className="resume-content" id='about-me'>
                     <div className='Overview'>
                         <h3>About Me</h3>
-                        <p>Hello! My name is {user.name}, I am male and I am studying QUT Master of IT. My desired job position is software development. <br />
+                        <p>Hello! My name is {user ? (user.name) : ("Please provide your Github token in .env")}, I am male and I am studying QUT Master of IT. My desired job position is software development. <br />
                             I have more experience in Java and Javascript programming, have a solid grasp of basic computer knowledge, and can complete my tasks well at work. In addition,
                             I have a passionate work attitude and strong teamwork capabilities. I also have the ability to develop independently and am good at identifying and solving problems.
                             I have strong execution ability, high sense of responsibility, strong sense of collective honor, dare to take on responsibilities, and can accept arrangements such as overtime work or business trips.<br />
@@ -69,7 +68,7 @@ const Resume = () => {
                     <div className='basicInfo'>
                         <h3>Basic Info</h3>
                         <div className='info'>
-                            <p><b>Name:</b></p><p>{user.name}</p>
+                            <p><b>Name:</b></p><p>{user ? (user.name) : ("Please provide your Github token in .env")}</p>
                         </div>
                         <div className='info'>
                             <p><b>Gender:</b></p><p>Male</p>
@@ -162,10 +161,7 @@ const Resume = () => {
                     <h3>Publications/Notable Outputs</h3>
                     <p>This is the publications/notable outputs section.</p>
                 </div>
-                </>
-            ) : (
-                <p>loading...</p>
-            )}
+                
         </div>
     );
 };
