@@ -8,7 +8,6 @@ import '../css/Header.css';
  * @return {JSX.Element} The header component.
  */
 const Header = () => {
-    const location = useLocation();
     return (
         <nav className="navbar navbar-expand-lg navbar-light gradient-custom ">
             <a className="navbar-brand" href="/">My Portfolio</a>

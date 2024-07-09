@@ -101,7 +101,7 @@ const About = () => {
                         <hr className="divider" />
                         <MdMailOutline size={70}/>
                         <br/>
-                        {repos? (<a>{repos.email}</a>) : (<a>Please provide your Github token in .env</a>)}
+                        {repos? (<p>{repos.email}</p>) : (<p>Please provide your Github token in .env</p>)}
                     </div>
                 </div>
                 <div className="about-item one-row-one-col">
@@ -119,7 +119,7 @@ const About = () => {
                         <hr className="divider" />
                         <img src={FacebookQR} alt="FacebookQR" className='facebookQR'/>
                         <br />
-                        {user? (<a>{user.name}</a>) : (<p>Please provide your Facebook token in .env</p>)}
+                        {user? (<p>{user.name}</p>) : (<p>Please provide your Facebook token in .env</p>)}
                     </div>
                 </div>
             </div>
