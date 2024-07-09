@@ -29,7 +29,7 @@ const Resume = () => {
             }
         };
         fetchUserData(); // Call the async function on component mount
-    }, []);
+    }, [githubAccessToken]);
 
     const SkillBar = ({ skill, level, color }) => {
         return (

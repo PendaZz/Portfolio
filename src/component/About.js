@@ -33,7 +33,7 @@ const About = () => {
             }
         };
         fetchRepos(); // Run the function when the component mounts
-    }, []); // Empty dependency array ensures this only runs once
+    }, [facebookAccessToken, githubAccessToken]); // Empty dependency array ensures this only runs once
 
 
 
@@ -63,7 +63,7 @@ const About = () => {
                     <div className="about-title">Photo</div>
                     <div className="content-container content1">
                         <hr className="divider" />
-                        <img src={Me} className='Me' />
+                        <img src={Me} className='Me' alt='Me' />
                     </div>
                 </div>
                 <div className="about-item two-row-two-col">
@@ -110,7 +110,7 @@ const About = () => {
                         <hr className="divider" />
                         <FiGithub size={70}/>
                         <br />
-                        {user? (<a href={user.html_url}>{user.html_url}</a>) : (<a>Please provide your Facebook token in .env</a>)}
+                        {user? (<a href={user.html_url}>{user.html_url}</a>) : (<p>Please provide your Facebook token in .env</p>)}
                     </div>
                 </div>
                 <div className="about-item one-row-one-col">
@@ -119,7 +119,7 @@ const About = () => {
                         <hr className="divider" />
                         <img src={FacebookQR} alt="FacebookQR" className='facebookQR'/>
                         <br />
-                        {user? (<a>{user.name}</a>) : (<a>Please provide your Facebook token in .env</a>)}
+                        {user? (<a>{user.name}</a>) : (<p>Please provide your Facebook token in .env</p>)}
                     </div>
                 </div>
             </div>

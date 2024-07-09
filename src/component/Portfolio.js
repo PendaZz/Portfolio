@@ -35,7 +35,7 @@ const Portfolio = () => {
             }
         };
         fetchRepos();
-    }, []);
+    }, [githubAccessToken]);
 
     // Handle Search function
     const handleSearch = (searchTerm) => {
