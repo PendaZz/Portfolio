@@ -33,7 +33,7 @@ const About = () => {
             }
         };
         fetchRepos(); // Run the function when the component mounts
-    }, [facebookAccessToken, githubAccessToken]); // Empty dependency array ensures this only runs once
+    }, [facebookAccessToken]); // Empty dependency array ensures this only runs once
 
 
 
@@ -53,7 +53,7 @@ const About = () => {
             }
         };
         fetchUserData(); // Run the function when the component mounts
-    }, []); // Empty dependency array ensures this only runs once
+    }, [githubAccessToken]); // Empty dependency array ensures this only runs once
 
 
     return (
